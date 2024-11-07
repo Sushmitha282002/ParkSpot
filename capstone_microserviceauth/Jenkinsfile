@@ -1,0 +1,71 @@
+pipeline {
+    agent any
+ 
+    stages{
+ 
+ 
+        stage('Add lib') {
+            steps {
+                script {
+                    // Build the Spring Boot application using Maven
+                    sh """
+                        cd /var/lib/jenkins/workspace/jenkinsmicro/capstone_microserviceauth
+                        mvn clean install
+                    """
+                }
+            }
+        }
+ 
+        stage('Test') {
+            steps {
+                script {
+                    // Run unit tests using Maven
+                    sh """
+                        cd /var/lib/jenkins/workspace/jenkinsmicro/capstone_microserviceauth
+                        mvn test
+                    """
+ 
+                }
+            }
+        }
+ 
+        stage('Package') {
+            steps {
+                script {
+                    // Package the application (JAR or WAR)
+                    sh """
+                        cd /var/lib/jenkins/workspace/jenkinsmicro/capstone_microserviceauth
+                        mvn package
+                    """
+ 
+                }
+            }
+        }
+                stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build Docker image
+                    sh """
+                        cd /var/lib/jenkins/workspace/jenkinsmicro/capstone_microserviceauth
+                        docker build -t projdocker .
+                    """
+                }
+            }
+        }
+    }
+ 
+ 
+ 
+    post {
+        always {
+            // Clean up workspace
+            cleanWs()
+        }
+        success {
+            echo 'Build and deployment succeeded!'
+        }
+        failure {
+            echo 'Build or deployment failed.'
+        }
+    }
+}

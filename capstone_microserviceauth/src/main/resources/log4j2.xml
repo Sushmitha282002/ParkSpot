@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Console Appender -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+        </Console>
+
+        <!-- General File Appender (for all logs) -->
+        <File name="FileLogger" fileName="logs/application.log" append="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"/>
+        </File>
+
+        <!-- Error File Appender (for error logs, excluding stack trace) -->
+        <File name="ErrorFileLogger" fileName="logs/error.log" append="true">
+            <!-- Exclude stack trace by using the %m (message) pattern without exception details -->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p - %m%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <!-- Application Logger for All Logs -->
+        <Logger name="org.happiest.capstone_microserviceauth" level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+
+        <!-- Error Logger (for capturing error-level logs without stack trace) -->
+        <Logger name="ErrorLogger" level="error" additivity="false">
+            <AppenderRef ref="ErrorFileLogger"/>
+        </Logger>
+
+        <!-- Root Logger (for general logs) -->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>
+
