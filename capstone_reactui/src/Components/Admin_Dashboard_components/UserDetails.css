@@ -1,0 +1,56 @@
+/* UserDetails.css */
+.user-details-grid-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'sidebar header header header'
+      'sidebar main main main';
+    height: 100vh;
+}
+ 
+.user-details-main-content {
+    flex: 1; /* Take up remaining space */
+    padding: 20px; /* Add some padding */
+    width: 80vw;
+}
+ 
+.user-details-table .thead th{
+    text-align: center;
+    background-color: #522d74; /* Blue for header background */
+    color: white;
+}
+/* Pagination styles */
+.pagination .page-link {
+    color: #522d74; /* Change default text color to purple */
+}
+ 
+.pagination .page-item.active .page-link {
+    background-color: #522d74; /* Active page background color */
+    border-color: #522d74; /* Active page border color */
+    color: white; /* Active page text color */
+}
+ 
+.pagination .page-item .page-link:hover {
+    background-color: rgba(128, 0, 128, 0.2); /* Lighter purple on hover */
+    border-color: #522d74; /* Border color on hover */
+}
+ 
+.pagination .page-item.disabled .page-link {
+    color: #6c757d; /* Disabled text color */
+    background-color: transparent;
+}
+ 
+.pagination .page-link {
+    border: 1px solid #522d74; /* Border color for all pagination links */
+}
+ 
+.pagination .page-link:focus {
+    box-shadow: 0 0 0 0.2rem rgba(128, 0, 128, 0.25); /* Purple focus outline */
+}
+ 
+ 
+ 
+ 
+ 
+ 

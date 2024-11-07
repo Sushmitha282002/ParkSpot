@@ -1,0 +1,90 @@
+.cards-container-landing {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically by default */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-height: 60vh; /* Full height for centering */
+    background-color: #ffffff;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .card-landing {
+    width: 100%; /* Full width for mobile */
+    max-width: 300px; /* Limit card size on small screens */
+    height: auto;
+    padding: 15px;
+    margin: 10px 0; /* Add space between cards */
+    text-align: center;
+    background-color: white;
+    border: 2px dashed #00aaff;
+    border-radius: 10px; /* Add rounded corners */
+    transition: border 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-landing:hover {
+    background-color: #ffe08a; /* Change background color on hover */
+    border-style: none; /* Remove dashed border */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for projection */
+  }
+  
+  .card-landing:hover h3, .card:hover p {
+    color: #0085ad; /* Change the color of h3 and p when hovering over the card */
+  }
+  
+  .h3-landing {
+    margin-bottom: 10px;
+    font-size: 18px; /* Smaller font for mobile */
+    color: #333; /* Default color */
+  }
+  
+  .p-landing {
+    font-size: 14px;
+    color: #666;
+    text-align: justify; /* Justify the paragraph text */
+  }
+  
+  /* Media Queries for larger screens */
+  
+  /* For tablets and smaller laptops (min-width: 768px) */
+@media (min-width: 768px) {
+  .cards-container-landing {
+    flex-direction: row; /* Align cards in a row */
+    justify-content: space-around;
+    min-height: 30vh; 
+    padding: 20px 10px;
+  }
+
+  .card-landing {
+    width: 260px; /* Set a fixed width for cards */
+    height: 280px; /* Set a fixed height for consistency */
+    margin: 15px; /* More spacing for larger screens */
+  }
+
+  .h3-landing {
+    font-size: 22px; /* Slightly larger font for readability */
+  }
+
+  .p-landing {
+    font-size: 16px;
+    line-height: 1.5; /* Better readability */
+  }
+}
+  /* For desktops and larger screens (min-width: 1024px) */
+  @media (min-width: 1024px) {
+    .card-landing {
+      width: 250px; /* Fixed card size for larger screens */
+      height: 185px;
+      padding: 20px;
+    }
+  
+    h3.card-landing {
+      font-size: 24px;
+    }
+  
+    p.card-landing {
+      font-size: 18px;
+    }
+  }
+  

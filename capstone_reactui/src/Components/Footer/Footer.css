@@ -1,0 +1,221 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+:root {
+    --background-color: #26d2b0;
+    --text-color: #F1F1F1;
+  
+}
+
+.footer {
+    background-color: #522d74;
+    padding: 40px 0;
+    color: var(--text-color);
+}
+
+.footer .logo h2 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.footer .tagline {
+    color: var(--text-color);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.copyrights p{
+    margin-top:60px;
+}
+
+.footerNav ul {
+    padding-left: 0;
+}
+
+.footerNav ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footerNav ul li a {
+    text-decoration: none;
+    color: #C0C0C0;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footerNav ul li a:hover {
+    color: #F1F1F1;
+    text-decoration: underline;
+}
+.footerNav li h5 a{
+    border-left: 2px solid #0c0d4d;
+}
+
+.heading h5 {
+    font-weight: 700;
+    color: black;
+    margin-bottom: 15px;
+}
+.s-heading h5 a{
+    color:#C0C0C0;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+}
+.s-heading h5 a:hover{
+    color:var(--text-color);
+    text-decoration: underline;
+
+}
+
+.socialIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+}
+.icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px; /* Optional: Adds space between icons */
+    margin-top: 10px;
+    
+    font-size:20px;
+  }
+  .icons .icon_width{
+    background-color: #F1F1F1;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+  }
+
+  .icons .icon_width:hover{
+    color:var(--text-color);
+    background-color: #0c0d4d;
+    cursor:pointer;
+    transition: color 0.3s ease;
+  }
+  
+  
+
+.socialIcons p {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+
+.footer .logo h2{
+    color: rgb(255, 255, 255)!important;
+}
+
+
+/* .socialIcons svg:hover {
+    color: var(--text-color);
+   
+} */
+
+
+.btn{
+    margin-top:80px;
+    width:100px;
+  
+}
+/* Customize the dropdown */
+.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-toggle {
+    background-color: #0c0d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  .dropdown-toggle:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .dropdown-menu {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    width: 150px;
+    padding: 10px;
+    margin-top: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-item {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #ddd;
+    border-radius: 3px;
+    color: #0c0d4d;
+  }
+  
+  .scroll-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 50px; /* Just above the footer dropdown */
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .scroll-to-top.enabled {
+    display: flex;
+  }
+  
+  /* Add hover effect for the button */
+  .scroll-to-top:hover {
+    background-color: #0056b3;
+  }
+  
+/* Additional styling for mobile responsiveness */
+@media (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer .col-md-3,
+    .footer .col-md-2,
+    .footer .col-md-4 {
+        margin-bottom: 20px;
+    }
+    
+    .footerNav ul {
+        text-align: center;
+    }
+    
+    .socialIcons {
+        justify-content: center;
+    }
+
+    .socialIcons svg {
+        margin-bottom: 10px;
+    }
+}
+

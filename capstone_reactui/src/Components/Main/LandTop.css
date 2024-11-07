@@ -1,0 +1,73 @@
+
+
+.background {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    overflow: hidden; /* Prevents overflow */
+}
+
+.background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; /* Cover the full height */
+    width: 100%; /* Cover the full width */
+    object-fit: cover; /* Ensures the image covers without distortion */
+    z-index: 1; /* Places the image below the overlay text */
+    opacity: 0.9;
+    background: black;
+    filter: brightness(0.4);
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the overlay text */
+    color: white;
+    text-align: center;
+    width: 70vw;
+    
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2; /* Places the overlay above the background image */
+}
+
+/* Header styles */
+.text-overlay h1 {
+    font-size: 3rem;
+    font-family: var(--font-primary); /* Use primary font */
+    color: #FFD700; /* Gold color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow for better readability */
+}
+
+.text-overlay h3 {
+    font-size: 2rem; /* Adjust size as needed */
+    font-family: var(--font-tertiary); /* Use tertiary font */
+    color: #00CED1; /* A nice turquoise color */
+    margin: 10px 0; /* Adds margin for spacing */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Paragraph styles */
+.text-overlay p {
+    font-size: 1.5rem;
+    margin: 10px 0; /* Adds margin for spacing */
+    font-family: var(--font-secondary); /* Use secondary font */
+    color: #FFFFFF; /* White color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adds a shadow for better readability */
+}
+
+/* Optional: Responsive design adjustments */
+@media (max-width: 768px) {
+    .text-overlay h1 {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+    }
+    .text-overlay h3 {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+    .text-overlay p {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+}

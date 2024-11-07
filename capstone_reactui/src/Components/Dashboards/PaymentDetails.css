@@ -1,0 +1,74 @@
+/* Table Styles for Payment Details */
+.payment-details-table {
+    width: 100%;
+    max-width: 800px; /* Limit the maximum width of the table */
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-bottom: 20px;
+}
+
+/* Adjust table header (th) */
+.payment-details-table th {
+    background-color: #522d74;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 10px 10px 0 0;
+    width: 33.33%; /* Distribute columns evenly */
+    text-align: center; /* Center the text horizontally */
+    vertical-align: middle; /* Center the text vertically */
+}
+
+/* Adjust table cells (td) */
+.payment-details-table td {
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center; /* Center the text horizontally */
+    vertical-align: middle; /* Center the text vertically */
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+/* Hover effect on table rows */
+.payment-details-table tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Payment Details Container */
+.payment-details-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center the table horizontally */
+}
+
+/* Make the content box responsive */
+.payment-details-content {
+    max-width: 800px; /* Set max width for the content box */
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Enable horizontal scrolling for small screens */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .payment-details-table th, .payment-details-table td {
+        padding: 8px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .payment-details-table {
+        font-size: 12px; /* Further reduce font size on very small screens */
+    }
+}

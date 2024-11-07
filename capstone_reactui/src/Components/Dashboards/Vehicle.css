@@ -1,0 +1,115 @@
+/* Vehicle.css */
+
+.vehicle-container {
+  max-width: 500px; /* Maximum width of the form */
+  margin: 20px auto; /* Center the container */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.vehicle-container h2 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Space below heading */
+  color: Black; /* Primary color for the heading */
+}
+
+.vehicle-form {
+  display: flex;
+  flex-direction: column; /* Stack form fields vertically */
+}
+
+.vehicle-number,
+.vehicle-type,
+.vehicle-model {
+  margin-bottom: 15px; /* Space between form fields */
+}
+
+/* Vehicle.css */
+
+/* Styling for input labels */
+.vehicle-form label {
+  margin-bottom: 5px; /* Space below labels */
+  font-size: 17px; /* Font size for labels */
+  font-weight: 400;
+  color: #333; /* Darker color for better readability */
+}
+
+/* Styling for input fields */
+.vehicle-form input {
+  padding: 12px; /* Increased padding for a better touch target */
+  font-size: 16px; /* Font size for inputs */
+  border: 1px solid #b5afaf; /* Light border for inputs */
+  border-radius: 5px; /* Rounded corners for inputs */
+  outline: none; /* Remove outline on focus */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+  background-color: #f9f9f9a6; /* Light background color for inputs */
+  width: 100%; /* Full width to fit the container */
+}
+
+/* Input focus state */
+.vehicle-form input:focus {
+  border-color: #1b2ce8; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(27, 44, 232, 0.5); /* Add subtle shadow on focus */
+}
+
+/* Input hover state */
+.vehicle-form input:hover {
+  border-color: #1b2ce8; /* Change border color on hover */
+  background-color: #ffffff; /* Change background color on hover for contrast */
+}
+
+.check-in-date{
+  margin-bottom: 30px;
+}
+
+.check-in-time{
+  margin-bottom: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .vehicle-form input {
+    font-size: 14px; /* Smaller font size for inputs on mobile */
+    padding: 10px; /* Adjust padding on smaller screens */
+  }
+}
+
+
+input:focus {
+  border-color: #1b2ce8; /* Change border color on focus */
+}
+
+button{
+  padding: 10px; /* Padding for button */
+  font-size: 16px; /* Font size for button */
+  color: #fff; /* White text color */
+  background-color: #26d2b0; /* Primary button color */
+  border: none; /* No border */
+  border-radius: 5px!important; /* Rounded corners for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+button:hover {
+  background-color: #5bb49f; /* Darker color on hover */
+}
+
+@media (max-width: 768px) {
+  .vehicle-container {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  h2 {
+    font-size: 24px; /* Smaller heading on mobile */
+  }
+
+  input {
+    font-size: 14px; /* Smaller font size for inputs on mobile */
+  }
+
+  button {
+    font-size: 14px; /* Smaller font size for button on mobile */
+  }
+}

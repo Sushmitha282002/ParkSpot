@@ -1,0 +1,142 @@
+/* General layout */
+.booking-details-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh; /* Ensure it takes full height */
+}
+
+.booking-details-content {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    overflow-x: auto;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Table Styles */
+.booking-details-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-bottom: 20px;
+}
+
+.booking-details-table th {
+    background-color: #522d74;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 10px 10px 0 0;
+}
+
+.booking-details-table td {
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+/* Hover effect on table rows */
+.booking-details-table tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Token Input Styling */
+.token-input {
+    padding: 8px;
+    width: 100%;
+    max-width: 180px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+.token-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button Styles */
+.cancel-button,
+.pay-now-button,
+.verify-button {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    margin: 5px;
+    width: 100%;
+    max-width: 120px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cancel-button {
+    background-color: #da4444;
+    color: white;
+}
+
+.pay-now-button, .verify-button {
+    background-color: #29a32d;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #ae1111;
+    transform: scale(1.05);
+}
+
+.pay-now-button:hover, .verify-button:hover {
+    background-color: #257d29;
+    transform: scale(1.05);
+}
+
+/* Disabled Buttons */
+.disabled-button {
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .booking-details-content {
+        max-width: 100%;
+    }
+
+    .booking-details-table th, .booking-details-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .cancel-button, .pay-now-button, .verify-button {
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .booking-details-table th, .booking-details-table td {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .cancel-button, .pay-now-button, .verify-button {
+        font-size: 10px;
+        padding: 8px;
+    }
+}

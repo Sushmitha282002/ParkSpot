@@ -1,0 +1,318 @@
+
+body, html {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100%; /* Full height */
+    background-color: white;
+}
+.provider-dashboard-container {
+    position: relative;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover; /* Ensure the background image covers the entire div */
+    background-position: center; /* Center the background image */
+    color: black; /* Text color for better contrast */
+    
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center text */
+    z-index:1;
+}
+  
+  .content-box {
+    z-index: 2; /* Make sure content is above the overlay */
+    width: 600px; /* Maximum width for the content */
+    padding: 40px 20px; /* Increased vertical padding for more height */
+    min-height: 300px; /* Minimum height to increase space */
+    border-radius: 10px; /* Slightly rounded corners */
+    background-color: white; /* Semi-transparent background for content */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    position: absolute; /* Position the content box absolutely */
+  }
+  
+  h1 {
+    font-size: 2.5rem; /* Size of the main heading */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  p {
+    font-size: 1.2rem; /* Size of the paragraph text */
+    margin-bottom: 30px; /* Space below the paragraph */
+  }
+  
+  .get-started-btn {
+    background-color: #ffcc00; /* Button color */
+    color: #333; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px 30px; /* Padding inside the button */
+    font-size: 1rem; /* Button text size */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .get-started-btn:hover {
+    background-color: #ffd700; /* Darker shade on hover */
+  }
+  
+  .learn-more-link {
+    display: inline-block; /* Ensures the link can have margin/padding */
+    margin-top: 15px; /* Space above the link */
+    color: #ffcc00; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .learn-more-link:hover {
+    color: #ffd700; /* Darker shade on hover */
+  }
+  
+  .rules-panel {
+    z-index: 2; /* Make sure rules panel is above the overlay */
+    max-width: 600px; /* Maximum width for the rules panel */
+    padding: 20px; /* Padding for the panel */
+    background-color:white; /* Semi-transparent background */
+    border-radius: 10px; /* Slightly rounded corners */
+    position: absolute; /* Position the rules panel absolutely */
+    top: 50%; /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    display: none; /* Hidden by default */
+    height:auto;
+  }
+  
+  .rules-panel.active {
+    display: flex; /* Show rules panel when active */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+    color:black;
+    width: 40rem;
+    margin-top: 20px;
+  }
+  .close-btn {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: white; /* White text color */
+    font-size: 20px; /* Font size */
+    position: absolute; /* Position the close button in the corner */
+    top: 10px;
+    right: 10px; /* Space from the right */
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  .rules-list{
+
+    font-size: 15px;
+  }
+  
+  .checkbox-container {
+    margin: 20px 0; /* Space around the checkbox */
+    display: flex; /* Flex display */
+    align-items: center; /* Center checkbox vertically */
+  }
+  
+  .agree-btn {
+    margin-top: 10px; /* Space above the button */
+    background-color: #ffcc00; /* Button color */
+    color: #333; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside the button */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .agree-btn:hover {
+    background-color: #ffd700; /* Darker shade on hover */
+  }
+  .name-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }
+  
+  .form-wrapper {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width:500px
+    
+  }
+  
+  .spot-register-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .spot-register-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .spot-register-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  .btn-simp {
+    background-color: #ffd700; /* Gold background */
+    color: #000; /* Black text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Font size */
+    /* Bold text */
+    text-transform: uppercase; /* Uppercase letters */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  
+  .btn-simp:hover {
+    background-color: #e6c200; /* Darker gold on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    
+  }
+  
+  .btn-simp:active {
+    transform: translateY(0); /* Return to original position on click */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+  }
+ /* Mobile devices (up to 768px) */
+@media (max-width: 768px) {
+  .provider-dashboard-container {
+      padding: 20px; /* Add some padding for mobile */
+      /* Keep the background image by not removing it */
+      background-size: cover; /* Ensure the background image covers the entire div */
+      background-position: center; /* Center the background image */
+      min-height: 100vh; /* Ensure the container takes at least full viewport height */
+      width: 100vw !important;
+  }
+  .rules-list{
+
+    font-size: 10px;
+  }
+
+  .content-box {
+      width: 100% !important; /* Full width on mobile */
+      padding: 20px; /* Reduce padding */
+      min-height: 250px; /* Adjust minimum height */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visibility */
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for better contrast with the background image */
+      border-radius: 10px; /* Rounded corners for the content box */
+      position: relative; /* Position relative to stack properly */
+      z-index: 1; /* Ensure it sits above the background */
+      margin-top: -30rem;
+  }
+
+  h1 {
+      font-size: 2rem; /* Smaller heading size */
+  }
+
+  p {
+      font-size: 1rem; /* Smaller paragraph size */
+  }
+
+  .get-started-btn,
+  .btn-simp {
+      width: 100%; /* Full width buttons */
+      padding: 10px; /* Adjust padding for buttons */
+  }
+ 
+  .rules-panel.active{
+    width: 40rem;
+    margin-top: 20px;
+  }
+
+  .rules-panel {
+      max-width: 90%; /* Limit width on mobile */
+      padding: 10px; /* Adjust padding for rules panel */
+  }
+  /* Extra Small Devices (up to 428px) */
+@media (max-width: 428px) {
+  .provider-dashboard-container {
+      padding: 10px; /* Add padding to keep content within view */
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      width: 100vw;
+  }
+  .rules-list{
+
+    font-size: 10px;
+  }
+
+  .content-box {
+      width: 100% !important; /* Full width for small screens */
+      padding: 15px; /* Reduce padding for small screens */
+      min-height: 200px; /* Adjusted minimum height */
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for visibility */
+      background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+      border-radius: 8px;
+      position: relative;
+      z-index: 1;
+      margin-top: -30rem;
+  }
+
+  h1 {
+      font-size: 1.5rem; /* Smaller heading size */
+      margin-bottom: 15px; /* Adjust space below heading */
+  }
+
+  p {
+      font-size: 0.9rem; /* Smaller paragraph size */
+      margin-bottom: 20px; /* Adjust space below paragraph */
+      padding: auto;
+  }
+
+  .get-started-btn,
+  .btn-simp {
+      width: 100%; /* Full width for buttons */
+      padding: 10px; /* Adjust padding for smaller screens */
+      font-size: 0.9rem; /* Slightly smaller font size */
+  }
+
+  .rules-panel {
+      max-width: 90%; /* Adjust width for rules panel */
+      padding: 10px; /* Reduce padding */
+  }
+
+  .agree-btn {
+      width: 100%; /* Full width for agree button */
+      padding: 10px; /* Adjust padding */
+  }
+  
+  .form-wrapper {
+      width: 100%; /* Full width for form wrapper */
+      padding: 20px; /* Adjust padding */
+  }
+  
+  .spot-register-form input {
+      font-size: 13px; /* Smaller input text */
+      padding: 8px; /* Adjust padding for inputs */
+  }
+}
+
+}

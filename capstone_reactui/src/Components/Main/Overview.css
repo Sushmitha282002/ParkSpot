@@ -1,0 +1,86 @@
+/* Container for the overview section */
+.overview-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically for mobile view */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: justify;
+  margin-top: 20px; /* Space from top */
+  margin-bottom: 30px;
+}
+
+/* Image section */
+.image-container {
+  flex: 0 0 auto; /* Keep the image width static and don't stretch */
+  margin: 10px 35px; /* Uniform margin around image */
+}
+
+.story-image {
+  width: 100%;
+  height:auto; /* Adjust height automatically for mobile */
+  max-width: 400px; /* Maintain max width */
+  border-radius: 10px; /* Rounded corners for image */
+}
+
+/* Story section */
+.story-container {
+  flex: 1; /* Allow the story container to take available space */
+  max-width: 690px; /* Limit the width of the story container */
+  padding: 20px; /* Add padding inside the box for spacing */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: flex-start; /* Align items at the top */
+}
+
+/* Heading style */
+.story-container h2 {
+  font-size: 2rem;
+  margin-top: 0; /* Keep the heading aligned to the top */
+}
+
+/* Adjust space between paragraphs and headings */
+.story-container p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px; /* Space between paragraphs */
+  margin-top: 10px; /* Space above paragraphs */
+}
+
+.story-container h2 + p {
+  margin-bottom: 25px; /* More space after the first heading for distinction */
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+  .overview-container {
+    flex-direction: row; /* Stack elements side by side for larger screens */
+    align-items: stretch; /* Aligns items to stretch to the height of the container */
+    height:82vh; /* Match height of image */
+    margin-top: 50px; /* Space from top */
+  }
+
+  .image-container {
+    margin-right: 15px; /* Space between image and text */
+    margin-left: 35px; /* Maintain some left margin */
+  }
+
+  .story-image {
+    height: 82vh; /* Maintain height for larger screens */
+  }
+
+  .story-container {
+    margin-left: 20px; /* Adjust margin for larger screens */
+  }
+
+  .story-container h2 {
+    font-size: 2rem; /* Larger font size for headings */
+  }
+
+  .story-container p {
+    font-size: 1.08rem; /* Font size for larger screens */
+  }
+}

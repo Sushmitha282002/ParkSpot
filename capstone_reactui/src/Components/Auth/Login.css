@@ -1,0 +1,153 @@
+.login-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+    width: 100vw;
+    position: relative;
+    background-image: url('../Pics/Loginbackground.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ 
+/* Background overlay to reduce image intensity */
+.login-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with opacity */
+    z-index: 1; /* Ensure overlay stays below the login form */
+}
+ 
+/* Glassmorphism container for the login card */
+.glassmorphism {
+    position: relative;
+    z-index: 2; /* Ensure the login form stays above the overlay */
+    background: rgba(255, 255, 255, 0.25); /* Increased transparency */
+    backdrop-filter: blur(12px); /* Blur effect for glassmorphism */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(2, 4, 40, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle border for definition */
+    width: 100%;
+    max-width: 500px; /* Max width for the card */
+    min-width: 350px; /* Minimum width */
+}
+ 
+/* Adjust the overall width of the login-container */
+.login-container {
+    width: 80vw; /* This will increase the width of the container */
+    max-width: 500px; /* Maximum width of the container */
+}
+ 
+/* Login header */
+.loginheading {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+ 
+/* Label for email and password */
+.loginlabel {
+    color: #ffffff;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 18px;
+}
+ 
+/* Form input styling */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #5bb49f;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.6); /* Light transparent input background */
+    color: black;
+}
+ 
+/* Buttons */
+.btn-login {
+    background-color: #26d2b0 !important;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+ 
+/* Hover effect for buttons */
+.btn-login:hover {
+    background-color: #5bb49f !important;
+    color: white;
+}
+ 
+/* Link button (Google Sign-In, Forgot Password, Sign Up) */
+.btn-link {
+    background-color: transparent !important;
+    color:darkblue!important;
+    padding: 4px 10px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+ 
+/* Hover effect for link buttons */
+.btn-link:hover {
+    color: darkblue !important;
+    text-decoration: underline;
+}
+ 
+/* Spacing between links */
+.link-separator {
+    height: 8px;
+}
+ 
+/* Mobile responsive design */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90vw;
+        max-width: 400px; /* Reduced width for smaller devices */
+    }
+ 
+    .glassmorphism {
+        width: 100%;
+    }
+}
+.password-input-wrapper {
+    position: relative;
+  }
+  
+  .eye-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: white; /* Button color */
+    font-size: 1.1em;
+
+  }
+  
+  .eye-icon {
+    color: rgb(11, 10, 10); /* Eye icon color */
+  }
+  
+  .eye-button:focus {
+    outline: none;
+  }
+  
+  .form-control {
+    padding-right: 20px; /* To make space for the eye icon */
+  }
+  

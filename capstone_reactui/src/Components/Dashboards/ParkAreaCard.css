@@ -1,0 +1,270 @@
+/* Base styling for the card */
+body, html {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100%; /* Full height */
+    background-color: white;
+ 
+}
+.bar{
+    display:block;
+    padding-top: 20px;
+    margin-left: 20px;
+}
+/* Container for the bar icon and search input */
+.bar-search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    position: relative; /* For relative positioning of dropdown */
+  }
+ 
+  /* Bar icon container */
+  .bar {
+    margin-right: 20px;
+    position: relative; /* Necessary for dropdown positioning */
+    cursor: pointer;
+  }
+ 
+  /* Bar icon styling */
+  .bar i {
+    font-size: 24px;
+    color: #333; /* Adjust color as needed */
+    transition: color 0.3s ease;
+  }
+ 
+  .bar i:hover {
+    color: #0056b3; /* Hover effect for the icon */
+  }
+ 
+  /* Dropdown menu styling */
+  .dropdown-menu {
+    position: absolute;
+    top: 40px; /* Adjust this value to fine-tune dropdown position */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 5px;
+    width: 180px; /* Set a fixed width */
+  }
+ 
+  .dropdown-menu .dropdown-item {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+ 
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: #0056b3; /* Hover effect for the dropdown item */
+  }
+ 
+ 
+ 
+.slot-card {
+    display: flex;
+    flex-direction: column!important;
+    align-items: center;
+    justify-content: center!important;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 15px auto;
+    margin-bottom: 30px;
+}
+ 
+/* Hover effect to add interactivity */
+.slot-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+ 
+/* Image styling */
+.slot-img {
+    width: 100%!important;
+    height: 200px!important;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px;
+}
+ 
+.slot-content{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 80%;
+}
+/* Title styling */
+.slot-card h4 {
+    color: #390248;
+    font-size: 1.5em;
+    margin: 15px 0;
+    text-align: center;
+}
+ 
+/* Text and content styling */
+.slot-card div {
+    color: #000000;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+ 
+/* Button styling */
+.slot-card button {
+    background-color: #522d74;
+    border: none;
+    margin-top: -5px;
+    padding: 5px 10px;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+ 
+.slot-card button:hover {
+    background-color: #34174f;
+    color: white;
+}
+ 
+ 
+ 
+/* Container for the search input */
+/* Container for the search input */
+/* Container for the search input */
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Adjust based on your design */
+    margin: 0 auto;
+  }
+ 
+  /* Input field styling */
+  .search-input {
+    width: 100%;
+    padding: 15px 15px 10px 45px!important; /* Adjust left padding for icon space */
+    font-size: 16px;
+    border: 1px solid #1b2ce8!important;
+    border-radius: 30px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+ 
+ 
+/* Hover effect for the search input */
+.search-input:hover {
+    border-color: #0056b3 !important; /* Change border color on hover */
+    box-shadow: 0 0 5px rgba(0, 91, 179, 0.5); /* Optional: Add shadow effect on hover */
+  }
+ 
+  /* Focus styling for input */
+  .search-input:focus {
+    border-color: #0056b3 !important; /* Focus border color */
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.5); /* Optional: Add shadow effect when focused */
+  }
+ 
+  /* Search icon styling */
+  .search-icon {
+    position: absolute;
+    left: 15px; /* Set this to where you want the icon */
+    top: 40%; /* Center it vertically */
+    transform: translateY(-50%); /* Adjust to align vertically */
+    color: #007bff;
+    font-size: 18px; /* Adjust size as needed */
+    pointer-events: none; /* Prevent clicks on the icon */
+  }
+ 
+  /* Small devices (phones, 576px and below) */
+@media (max-width: 576px) {
+    .search-container {
+      margin-right: 15px;
+        max-width: 100%; /* Make the search container full width on small screens */
+    }
+    .search-input {
+      font-size: 14px; /* Slightly reduce the font size for small screens */
+      padding: 12px 12px 8px 40px !important; /* Adjust padding for smaller screens */
+    }
+    .search-icon {
+      font-size: 16px; /* Reduce icon size */
+    }
+  }
+ 
+  /* Medium devices (tablets, 768px and below) */
+  @media (max-width: 768px) {
+    .search-container {
+      max-width: 100%; /* Keep full width for tablets as well */
+    }
+    .search-input {
+      font-size: 15px; /* Slightly reduce the font size */
+      padding: 14px 14px 10px 42px !important; /* Adjust padding for smaller screens */
+    }
+  }
+ 
+  /* Large devices (desktops, 992px and below) */
+  @media (max-width: 992px) {
+    .search-container {
+      max-width: 90%; /* Make the search input a bit smaller on larger screens */
+    }
+  }
+ 
+  /* Extra large devices (1200px and above) */
+  @media (min-width: 1200px) {
+    .search-container {
+      max-width: 400px; /* Use the original size for larger screens */
+    }
+  }
+ 
+/* Responsive layout for larger screens */
+@media (min-width: 768px) {
+    .slot-card {
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 600px; /* Limit width for large screens */
+    }
+ 
+    .slot-card img {
+        width: 40%; /* Image takes up 40% of the card */
+        height: auto;
+        border-right: 1px solid #ddd;
+        border-bottom: none;
+    }
+ 
+    .slot-card div {
+        text-align: left;
+        margin-left: 20px;
+    }
+}
+ 
+/* Full-width container styling for mobile */
+@media (max-width: 576px) {
+    .slot-card {
+        padding: 15px;
+    }
+ 
+    .slot-card h4 {
+        font-size: 1.2em;
+    }
+ 
+    .slot-card div {
+        font-size: 12px;
+    }
+ 
+    .slot-card button {
+        padding: 8px 15px;
+    }
+}
